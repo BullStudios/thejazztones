@@ -1,0 +1,110 @@
+/* General page structure */
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #111;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Light/Dark toggle button */
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Page wrapper */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Card layout */
+.card {
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Individual video cards */
+.video-card {
+  background-color: #222;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.video-card p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
