@@ -5,77 +5,260 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Learn Jazz Guitar with Steve | Practice Videos & Lessons</title>
+  <link rel="canonical" href="https://thejazztones.co.uk/learn.html" />
 
-  <meta name="description" content="Join Steve for bite-sized jazz guitar tutorials, licks, and playalongs. Watch and learn at your pace – straight from Weston-super-Mare." />
-  <meta name="keywords" content="Jazz Guitar Lessons, Learn Guitar, Steveb Guitarist, Guitar Tutorials, Practice Guitar Online, Weston-super-Mare, Britpop Guitar, Jazz Improvisation" />
-  <meta name="author" content="Steveb - The Jazztones" />
+  <title>Learn Jazz Guitar with Steve | Online Lessons & Playalongs</title>
+
+  <meta name="description" content="Learn jazz guitar online with Steve — practical lessons, licks, and playalongs designed for beginners and intermediate players. Explore bebop, blues, Latin jazz, and lo-fi styles at your own pace." />
+  
+  <meta name="keywords" content="learn jazz guitar, jazz guitar lessons, guitar playalong, jazz improvisation, blues guitar, Latin jazz guitar, bebop licks, jazz chords, Steve Jazztones lessons, guitar practice" />
+
+  <meta name="author" content="Steve - The Jazztones" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Learn Jazz Guitar with Steve | Online Lessons & Playalongs" />
+  <meta property="og:description" content="Join Steve for practical jazz guitar lessons and licks. Learn at your pace — straight from Weston-super-Mare." />
+  <meta property="og:image" content="https://thejazztones.co.uk/image/logoJT.png" />
+  <meta property="og:url" content="https://thejazztones.co.uk/learn.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Learn Jazz Guitar with Steve" />
+  <meta name="twitter:description" content="Bite-sized guitar tutorials, playalongs, and practice ideas for jazz and blues lovers." />
+  <meta name="twitter:image" content="https://thejazztones.co.uk/image/logoJT.png" />
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts & Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles2.css">
   <script src="main.js" defer></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Learn Jazz Guitar with Steve",
+    "description": "Online jazz guitar lessons, playalongs, and improvisation tips with Steve from The Jazztones.",
+    "provider": {
+      "@type": "Organization",
+      "name": "The Jazztones",
+      "sameAs": "https://thejazztones.co.uk"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "instructor": {
+        "@type": "Person",
+        "name": "Steve"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* Video grid styling */
+
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .video-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background: var(--card-bg, #222);
+    }
+
+    .video-card video {
+      width: 100%;
+      border-radius: 1rem;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .video-card:hover video {
+      transform: scale(1.02);
+    }
+
+    .video-card p {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* Coming soon overlay */
+    .coming-soon::after {
+      content: "🎬 Coming Soon";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(0.5px);
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .coming-soon:hover::after {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .coming-soon::after {
+        background: rgba(93, 92, 92, 0.65);
+        color: #222;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <button class="toggle-mode" onclick="toggleMode()" title="Toggle Light/Dark Mode">🌙</button>
-<main class="container"></main>
+  <button class="toggle-mode" onclick="toggleMode()" aria-label="Toggle Light/Dark Mode" title="Toggle Light/Dark Mode">🌙</button>
+  
   <header>
     <h1>Learn With Me</h1>
     <p>Explore jazz licks, chord theory, practice techniques & more</p>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
+  <section class="extra-img">
+    <img src="image/logoJT.png" alt="Steve the Jazz Guitarist teaching" width="300" height="300" loading="eager">
+  </section>
+
+  <nav aria-label="Main navigation">
     <a href="index.html#about">About</a>
     <a href="index.html#gigs">Gigs & Jams</a>
     <a href="index.html#setlist">Setlist</a>
     <a href="index.html#live">Live Audio</a>
-    <a href="learn.html">Learn with me</a>
+    <a href="my-setup.html">My Setup</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 
-  <section class="card">
-    <h2>Watch, Learn & Jam Along</h2>
-    <p>All videos are created with real practice in mind — no fluff, just grooves, licks, and lessons you can apply right away. Perfect for beginners wanting to get started, or intermediate players looking to add spice to their soloing.</p>
-  </section>
-
-  <section class="card">
-    <h3>Latest Guitar Lessons</h3>
-
-    <div class="video-grid">
-      <!-- Example video embeds -->
-      <div class="video-card">
-        <video controls>
-          <source src="learnvid/jazz-lick-1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Jazz Lick in Gm7 – Targeting the 3rd & 7th</p>
+  <main>
+    <!-- Phase 1 -->
+    <section id="phase1" class="card">
+      <h2>Phase 1: Jazz Standards</h2>
+      <p>Start here with essential standards and chord/solo practice.</p>
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls preload="metadata" aria-label="Autumn Leaves chord comping tutorial">
+            <source src="learnvid/autumn-leaves.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Autumn Leaves — Chord Comping Walkthrough</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Blue Monk tutorial coming soon"></video>
+          <p>Blue Monk — Simple Solo Phrasing</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="So What tutorial coming soon"></video>
+          <p>So What — Modal Chord Exploration</p>
+        </div>
       </div>
+    </section>
 
-      <div class="video-card">
-        <video controls>
-          <source src="learnvid/chord-walk.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Chord Walkthrough: Shell Voicings</p>
+    <!-- Phase 2 -->
+    <section id="phase2" class="card">
+      <h2>Phase 2: Alternative Styles</h2>
+      <p>Latin, Salsa, Bebop, and LoFi jazz explorations. Develop stylistic versatility and improvisation.</p>
+      <div class="video-grid">
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Latin Jazz tutorial coming soon"></video>
+          <p>Latin Jazz Comping Patterns</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Bebop Lines tutorial coming soon"></video>
+          <p>Bebop Lines Over ii—V—I</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="LoFi Jazz tutorial coming soon"></video>
+          <p>LoFi Jazz Chord Melodies</p>
+        </div>
       </div>
+    </section>
 
-      <div class="video-card">
-        <video controls>
-          <source src="learnvid/modes-demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Looper Improv Tips – Fun Ideas</p>
+    <!-- Phase 3 -->
+    <section id="phase3" class="card">
+      <h2>Phase 3: Soloing Practice</h2>
+      <p>Focus on improvisation, phrasing, and melodic development over different styles.</p>
+      <div class="video-grid">
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Bebop Solo tutorial coming soon"></video>
+          <p>30-sec Bebop Solo Exercise</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Latin Groove Solo tutorial coming soon"></video>
+          <p>Latin Groove Solo Ideas</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="LoFi Solo tutorial coming soon"></video>
+          <p>LoFi Solo Practice with Backing Track</p>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-</main>
+    <!-- Phase 4 -->
+    <section id="phase4" class="card">
+      <h2>Phase 4: Gear & Workflow</h2>
+      <p>See my setup, recording process, and how I practice effectively. Great for musicians looking for ideas.</p>
+      <div class="video-grid">
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Guitar setup tutorial coming soon"></video>
+          <p>Guitar & Amp Setup for Jazz Tone</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Pedal chain tutorial coming soon"></video>
+          <p>Pedal Chain & Effects Demo</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Recording workflow tutorial coming soon"></video>
+          <p>Recording Workflow & Looper Tips</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phase 5 -->
+    <section id="phase5" class="card">
+      <h2>Phase 5: Extra Content</h2>
+      <p>Tips, practice hacks, challenges, and viewer-requested lessons.</p>
+      <div class="video-grid">
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Improvisation challenge coming soon"></video>
+          <p>Improvisation Challenge — Play Along</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Jazz tip coming soon"></video>
+          <p>Quick Jazz Tip: Connecting Chords & Scales</p>
+        </div>
+        <div class="video-card coming-soon">
+          <video muted poster="image/placeholder.jpg" aria-label="Viewer request coming soon"></video>
+          <p>Viewer Request: Mini Lesson</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="card footer">
-    <p>More coming soon – got a request? <a href="index.html#contact">Get in touch</a> and let me know what you’d like to learn.</p>
+    <p>More videos coming soon — got a request? <a href="index.html#contact">Get in touch</a> and let me know what you'd like to learn.</p>
   </footer>
 </body>
-
 </html>

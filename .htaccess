@@ -1,0 +1,16 @@
+# --- The Jazztones Canonical & HTTPS Redirects ---
+RewriteEngine On
+
+# 1. Force HTTPS and remove www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.thejazztones\.co\.uk [NC]
+RewriteRule ^(.*)$ https://thejazztones.co.uk/$1 [L,R=301]
+
+# 2. Remove /index.html from URLs
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ https://thejazztones.co.uk/ [L,R=301]
+
+# 3. Remove trailing slashes (except root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.+)/$ /$1 [L,R=301]

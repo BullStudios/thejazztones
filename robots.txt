@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap location (make sure to update the URL if your sitemap is named differently or hosted elsewhere)
-Sitemap: https://thejazztones.co.uk/sitemap.xml
+Sitemap: http://thejazztones.co.uk/sitemap.xml

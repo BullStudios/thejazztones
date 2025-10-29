@@ -1,42 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://thejazztones.co.uk/</loc>
-    <lastmod>2025-07-16</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/learn.html</loc>
-    <lastmod>2025-07-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/#about</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/#gigs</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/#setlist</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/#live</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://thejazztones.co.uk/#contact</loc>
-    <priority>0.7</priority>
-  </url>
-
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://thejazztones.co.uk/</loc>
+	<lastmod>2025-10-17T10:06:56+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://thejazztones.co.uk/learn.html</loc>
+	<lastmod>2025-10-17T10:06:56+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://thejazztones.co.uk/my-setup.html</loc>
+	<lastmod>2025-10-17T10:06:56+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
 </urlset>

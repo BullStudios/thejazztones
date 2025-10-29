@@ -65,7 +65,7 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
-.tiktok-link {
+.youtube-link,.tiktok-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -78,9 +78,10 @@ body::before {
   text-decoration: underline;
 }
 
-.tiktok-logo {
-  width: 48px;
-  height: 48px;
+.youtube-logo, .tiktok-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -211,6 +212,20 @@ header h1 {
 
 /* ===== NAVIGATION ===== */
 nav {
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: #ddd;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background: #222;
+}
+nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -225,7 +240,7 @@ nav {
 }
 
 nav a {
-  color: var(--accent);
+  color: #f0f0f0;;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 25px;
@@ -251,9 +266,9 @@ nav a:hover::before {
 }
 
 nav a:hover {
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px var(--shadow);
+  background: rgba(255, 215, 0, 0.1); /* Subtle gold tint */
+  color: #ffd700; /* Soft gold text */
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
 }
 
 /* ===== MODE TOGGLE ===== */
@@ -1095,4 +1110,80 @@ video {
 .video-card video {
   width: 100%;
   border-radius: 0.5rem;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --link-color: #1db954; /* or any accent color */
+}
+
+body.dark-mode a {
+  color: var(--link-color);
+}
+
+body.dark-mode .card {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Light mode overrides */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #f9f9f9;
+  --link-color: #1a73e8;
+}
+body.dark-mode {
+  --bg-color: #111;
+  --text-color: #f2f2f2;
+  --card-bg: #222;
+  --header-bg: linear-gradient(to right, #111, #333);
+  --header-text: #f2f2f2;
+  --btn-bg: #333;
+  --btn-text: #fff;
+  --btn-hover: #555;
+}
+
+body.light-mode a {
+  color: var(--link-color);
+}
+
+body.light-mode .card {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  --bg-color: #111;
+  --text-color: #f2f2f2;
+  --card-bg: #222;
+  --header-bg: linear-gradient(to right, #111, #333);
+  --header-text: #f2f2f2;
+  --btn-bg: #333;
+  --btn-text: #fff;
+  --btn-hover: #555;
+}
+
+body.light-mode {
+  --bg-color: #f2f2f2;
+  --text-color: #222;
+  --card-bg: #fff;
+  --header-bg: linear-gradient(to right, #1f1f1f, #444);
+  --header-text: #fff;
+  --btn-bg: #1f1f1f;
+  --btn-text: #fff;
+  --btn-hover: #444;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.card, .gear-item {
+  background: var(--card-bg);
+  transition: background 0.3s, color 0.3s;
 }
